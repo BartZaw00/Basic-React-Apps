@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Secular+One&display=swap');
 
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top:20px;
+}
+
 #credits {
   font-family: 'Montserrat', sans-serif;
   background-color: black;

@@ -8,20 +8,33 @@ const API_KEY = '04c35731a5ee918f014970082a0088b1';
 
 const App = () => {
 
-  const searchMovies = async () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [films, setFilms] = useState([]);
+  const [originalFilms, setOriginalFilms] = useState([]);
+
+  useEffect(() => {
+    displayMovies();
+  }, []);
+
+  useEffect(() => {
+    const filteredFilms = originalFilms.filter((film) => {
+      return film.title.toLowerCase().includes(searchQuery.toLowerCase());
+    });
+
+    setFilms(filteredFilms);
+  }, [searchQuery]);
+
+  const displayMovies = async () => {
     const response = await fetch(`${API_URL}api_key=${API_KEY}&page=1`);
     const data = await response.json();
 
     setFilms(data.results);
-    console.log(films)
+    setOriginalFilms(data.results);
   }
 
-  const [searchQuery, setSearchQuery] = useState('');
-  const [films, setFilms] = useState([]);
-
-  useEffect(() => {
-    searchMovies();
-  }, []);
+  const handleChange = (event) => {
+    setSearchQuery(event.target.value.toLowerCase())
+  }
 
   return (
     <>
@@ -34,12 +47,16 @@ const App = () => {
           type="text"
           placeholder="Search movies"
           value={searchQuery}
-          onChange={(event) => setSearchQuery(event.target.value)}
+          onChange={handleChange}
         />
         <div className="films">
-          {films.map((item, index) => {
-            return <Film key={index} film={item} />
-          })}
+          {
+            films?.length > 0
+              ? films.map((item, index) => {
+                return <Film key={index} film={item} />
+              })
+              : console.log('Array is empty')
+          }
         </div>
       </main>
       <footer><a id="credits" href="https://github.com/BartZaw00" target="_blank">Created By <span>Bartosz

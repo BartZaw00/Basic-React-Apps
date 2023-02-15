@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Secular+One&display=swap');
+
+
+#header-container {
+  background: linear-gradient(146deg, #454977 0%, #394970 50%);
+  font-family: 'Raleway';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+
+#header-container h1 {
+  font-size: 50px;
+  color: #83CFDF;
+}
+
+#main-container {
+  background: linear-gradient(146deg, #2d2f46 0%, #1f273d 50%);
+  padding: 40px 0;
+  font-family: 'Raleway', sans-serif;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.search {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 15px 50px 15px 15px;
+  font-size: 30px;
+  font-weight: bold;
+  outline: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.films {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.film {
+  width: 200px;
+  height: 300px;
+  background: linear-gradient(146deg, #454977 0%, #394970 50%);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.film:hover {
+  transform: translateY(-10px);
+}
+
+.film img {
+  max-height: 80%;
+}
+
+.film-description {
+  padding: 10px;
+  font-family: 'Montserrat';
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+}
+
+.font-size-medium {
+  font-size: 13px;
+}
+
+.film-description span:first-child {
+  color: white;
+}
+
+.vote {
+  background: linear-gradient(146deg, #2d2f46 0%, #1f273d 50%);
+  padding: 5px 10px;
+  align-self: center;
+  color: white;
+}
+
+.vote-average-good {
+  color: greenyellow;
+}
+
+#credits {
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#credits:hover span {
+  color: rgb(177, 85, 32)
+}

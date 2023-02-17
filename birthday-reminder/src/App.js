@@ -1,23 +1,59 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="main-container">
+      <div class="birthday-card">
+        <h2>5 birthdays today</h2>
+        <div class="birthdays">
+          <div class="birthday">
+            <div class="birthday-img">
+              <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="" />
+            </div>
+            <div class="birthday-details">
+              <span>Hester Hagan</span>
+              <span>35 years</span>
+            </div>
+          </div>
+          <div class="birthday">
+            <div class="birthday-img">
+              <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="" />
+            </div>
+            <div class="birthday-details">
+              <span>Bertie Yates</span>
+              <span>29 years</span>
+            </div>
+          </div>
+          <div class="birthday">
+            <div class="birthday-img">
+              <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="" />
+            </div>
+            <div class="birthday-details">
+              <span>Bertie Yates</span>
+              <span>29 years</span>
+            </div>
+          </div>
+          <div class="birthday">
+            <div class="birthday-img">
+              <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="" />
+            </div>
+            <div class="birthday-details">
+              <span>Bertie Yates</span>
+              <span>29 years</span>
+            </div>
+          </div>
+          <div class="birthday">
+            <div class="birthday-img">
+              <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="" />
+            </div>
+            <div class="birthday-details">
+              <span>Bertie Yates</span>
+              <span>29 years</span>
+            </div>
+          </div>
+        </div>
+        <button class="btn">Remove all</button>
+      </div>
     </div>
   );
 }

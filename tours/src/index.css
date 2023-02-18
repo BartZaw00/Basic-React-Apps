@@ -78,7 +78,15 @@ code {
   word-wrap: break-word; /* causes the paragraph to not overflow */
 }
 
-.tour-details .btn {
+.tour-details .btn-see-more {
+  border: none;
+  background-color: transparent;
+  color: rgb(24, 153, 212);
+  font-family: 'Montserrat';
+  cursor: pointer;
+}
+
+.tour-details .btn-not-interested {
   font-family: 'Montserrat';
   background: transparent;
   margin: 20px auto;
@@ -89,7 +97,7 @@ code {
   cursor: pointer;
 }
 
-.tour-details .btn:hover {
+.tour-details .btn-not-interested:hover {
   background: rgb(187,23,23);
   color: white;
 }

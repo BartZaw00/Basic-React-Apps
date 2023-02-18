@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.css';
+import Birthday from './Birthday'
 
 function App() {
   const birthdayTable = [
@@ -58,16 +58,7 @@ function App() {
         <div className="birthdays">
           {
             birthdays.map((item) => {
-              return (<div className="birthday" key={item.id}>
-                <div className="birthday-img">
-                  <img src={item.img_url} alt="" />
-                </div>
-                <div className="birthday-details">
-                  <span>{item.name}</span>
-                  <span>{item.age} years</span>
-                </div>
-              </div>)
-
+              return <Birthday key={item.id} birthday={item} />
             })}
         </div>
         <button className="btn" onClick={() => setBirthdays([])}>Remove all</button>

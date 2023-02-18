@@ -1,5 +1,12 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Nunito+Sans:wght@600&family=Montserrat:wght@600&display=swap');
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +17,98 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#container {
+  letter-spacing: 1px;
+  font-size: 30px;
+  padding-top: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#tours {
+  margin: 50px 0;
+}
+
+.tour {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: .5s ease-in-out;
+  margin-bottom: 50px;
+}
+
+.tour:hover {
+  transform: translateY(-5px);
+}
+
+.tour img {
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.tour-details {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin: 20px 0;
+}
+
+.tour-details-header .price {
+  color: rgb(133, 190, 40);
+  font-weight: bold;
+  background-color: rgba(161, 230, 51, 0.2);
+  border-radius: 5px;
+}
+
+.tour-details .description {
+  font-size: 13px;
+  word-wrap: break-word; /* causes the paragraph to not overflow */
+}
+
+.tour-details .btn {
+  font-family: 'Montserrat';
+  background: transparent;
+  margin: 20px auto;
+  padding: 5px 35px;
+  border-radius: 5px;
+  border: 1px solid rgb(187, 23, 23);
+  color: rgb(187, 23, 23);
+  cursor: pointer;
+}
+
+.tour-details .btn:hover {
+  background: rgb(187,23,23);
+  color: white;
+}
+
+#credits {
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#credits:hover span {
+  color: rgb(177, 85, 32)
 }

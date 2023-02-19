@@ -107,18 +107,22 @@ function App() {
   // and resolve the "too many re-renders" error.
 
   return (
-    <main id="container">
-      <div className="title">Our Reviews</div>
-      <div className="break"></div>
-      <div className="box">
-        <Profile review={review} onChange={handleClick} />
-        <div>
-          <button className="btn left" onClick={() => handleClick(1)}></button>
-          <button className="btn right" onClick={() => handleClick(2)}></button>
+    <>
+      <main id="container">
+        <div className="title">Our Reviews</div>
+        <div className="break"></div>
+        <div className="box">
+          <Profile review={review} onChange={handleClick} />
+          <div>
+            <button className="btn left" onClick={() => handleClick(1)}></button>
+            <button className="btn right" onClick={() => handleClick(2)}></button>
+          </div>
+          <div className="btn-surprise-me" onClick={() => handleClick(3)}>Surprise Me</div>
         </div>
-        <div className="btn-surprise-me" onClick={() => handleClick(3)}>Surprise Me</div>
-      </div>
-    </main>
+      </main>
+      <footer><a id="credits" href="https://github.com/BartZaw00" target="_blank">Created By <span>Bartosz
+        Zawadka</span></a></footer>
+    </>
   );
 }
 

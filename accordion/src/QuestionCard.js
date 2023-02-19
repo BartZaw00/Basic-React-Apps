@@ -1,14 +1,16 @@
+import Question from "./Question";
+import { useState } from "react";
 
-function QuestionCard() {
+function QuestionCard(props) {
+    const [toggleBtn, setToggleBtn] = useState(false);
+
     return (
-        <div data-question class="question">
+        <div className="question">
             <div className="question-header">
-                <p>Do You Accept All Major Credit Cards?</p>
-                <button data-button>+</button>
+                <p>{props.questionCard.question}</p>
+                <button onClick={() => setToggleBtn(!toggleBtn)}>{toggleBtn ? '-' : '+'}</button>
             </div>
-            <div class="break-line"></div>
-            <div class="question-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur ea,
-                accusamus a consectetur esse porro omnis dolores dolor officia dolore.</div>
+            {toggleBtn && <Question questionCard={props.questionCard} />}
         </div>
     );
 }

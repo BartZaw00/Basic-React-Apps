@@ -44,6 +44,7 @@ code {
   justify-content: space-between;
   flex-wrap: wrap;
   border-radius: 5px;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.5);
 }
 
 .question-header {

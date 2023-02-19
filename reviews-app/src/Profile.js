@@ -1,5 +1,7 @@
 function Profile(props) {
 
+    
+
     return (
         <>
             <div className="profile-photo"><img src={props.review.img} alt={props.review.name} /></div>

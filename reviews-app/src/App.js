@@ -89,9 +89,17 @@ function App() {
       })
     }
     if (option === 3) {                    // option - surprise
-      setIndex(() => Math.floor(Math.random() * 9));
+      let randomNumber = Math.floor(Math.random() * 9);
+      if (randomNumber === index)
+        while (randomNumber === index)
+          randomNumber = Math.floor(Math.random() * 9);
+      setIndex(randomNumber);
     }
   }
+
+  useEffect(() => {
+    setReview(reviewsTable[index]);
+  }, [index]);
 
   // By wrapping the handleClick calls in an arrow function, 
   // you're passing a function reference to onClick instead of calling 
@@ -103,9 +111,9 @@ function App() {
       <div className="title">Our Reviews</div>
       <div className="break"></div>
       <div className="box">
-        <Profile review={review} onChange={handleClick}/>
+        <Profile review={review} onChange={handleClick} />
         <div>
-          <button className="btn left" onClick={() => handleClick(1)}></button> 
+          <button className="btn left" onClick={() => handleClick(1)}></button>
           <button className="btn right" onClick={() => handleClick(2)}></button>
         </div>
         <div className="btn-surprise-me" onClick={() => handleClick(3)}>Surprise Me</div>

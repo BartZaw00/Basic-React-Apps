@@ -42,8 +42,10 @@ body {
 }
 
 .experience {
-  margin: 75px 150px;
+  padding: 75px 250px;
+  min-width: 100%;
   display: flex;
+  justify-content: space-between;
   gap: 100px;
   font-family: 'Lucida Grande' sans-serif;
 }
@@ -54,11 +56,12 @@ body {
 }
 
 .button {
-  font-size: 20px;
+  font-size: 25px;
   border: none;
   background-color: transparent;
   padding: 5px 20px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .one {

@@ -1,13 +1,16 @@
-function Birthday(props) {
-    return (<div className="birthday">
-        <div className="birthday-img">
-            <img src={props.birthday.img_url} alt="" />
-        </div>
-        <div className="birthday-details">
-            <span>{props.birthday.name}</span>
-            <span>{props.birthday.age} years</span>
-        </div>
-    </div>)
+function Birthday({ birthday }) {
+  const { name, age, img_url } = birthday;
+  return (
+    <div className="birthday">
+      <div className="birthday-img">
+        <img src={img_url} alt={name} />
+      </div>
+      <div className="birthday-details">
+        <span>{name}</span>
+        <span>{age} years</span>
+      </div>
+    </div>
+  );
 }
 
 export default Birthday;

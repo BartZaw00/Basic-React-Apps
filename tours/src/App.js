@@ -53,7 +53,7 @@ function App() {
       <div id="tours">
         {
           tours.map((item) => {
-            return <Tour key={item.id} tour={item} onButtonClick={handleToursStateChange} />
+            return <Tour key={item.id} {...item} onButtonClick={handleToursStateChange} />
           })
         }
       </div>

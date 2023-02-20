@@ -1,13 +1,10 @@
-function Profile(props) {
-
-    
-
+function Profile({name,job,img,text}) {
     return (
         <>
-            <div className="profile-photo"><img src={props.review.img} alt={props.review.name} /></div>
-            <div className="name">{props.review.name}</div>
-            <div className="position">{props.review.job}</div>
-            <div className="description">{props.review.text}</div>
+            <div className="profile-photo"><img src={img} alt={name} /></div>
+            <div className="name">{name}</div>
+            <div className="position">{job}</div>
+            <div className="description">{text}</div>
         </>
     )
 }

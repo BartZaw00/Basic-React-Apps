@@ -1,14 +1,14 @@
-function MenuItem(props) {
+function MenuItem({item}) {
     return (
         <div className="menu-element">
-            <img src={props.item.image} alt={props.item.name} />
+            <img src={item.image} alt={item.name} />
             <div className="description">
                 <div className="description-header">
-                    <span className="description-title">{props.item.name}</span>
-                    <span className="description-price">{props.item.price}</span>
+                    <span className="description-title">{item.name}</span>
+                    <span className="description-price">{item.price}</span>
                 </div>
                 <div className="description-header-line"></div>
-                <div className="description-text">{props.item.description}</div>
+                <div className="description-text">{item.description}</div>
             </div>
         </div>
     );

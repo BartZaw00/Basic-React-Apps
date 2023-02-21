@@ -1,16 +1,16 @@
 import Question from "./Question";
 import { useState } from "react";
 
-function QuestionCard(props) {
+function QuestionCard(item) {
     const [toggleBtn, setToggleBtn] = useState(false);
 
     return (
         <div className="question">
             <div className="question-header">
-                <p>{props.questionCard.question}</p>
+                <p>{item.question}</p>
                 <button onClick={() => setToggleBtn(!toggleBtn)}>{toggleBtn ? '-' : '+'}</button>
             </div>
-            {toggleBtn && <Question questionCard={props.questionCard} />}
+            {toggleBtn && <Question {...item} />}
         </div>
     );
 }

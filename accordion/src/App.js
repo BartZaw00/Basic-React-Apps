@@ -2,7 +2,7 @@ import { useState } from "react";
 import QuestionCard from "./QuestionCard";
 
 function App() {
-  const questionsTable = [
+  const questionsArray = [
     {
       id: 1,
       question: 'Do You Accept All Major Credit Cards?',
@@ -20,7 +20,7 @@ function App() {
     }
   ]
 
-  const [questions, setQuestions] = useState(questionsTable);
+  const [questions, setQuestions] = useState(questionsArray);
 
   return (
     <main id="container">
@@ -28,7 +28,7 @@ function App() {
       <div className="questions">
         {
           questions.map((question) => {
-            return <QuestionCard key={question.id} questionCard={question} />
+            return <QuestionCard key={question.id} {...question} />
           })
         }
       </div>

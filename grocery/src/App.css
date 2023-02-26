@@ -1,0 +1,166 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Secular+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --primary-color: rgb(199, 229, 247);
+    --container-main: #fff;
+    --input-field: #eee;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--container-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    margin: 0 50px;
+    border-radius: 10px;
+    padding: 40px 20px;
+    
+}
+
+.container h1 {
+    letter-spacing: 2px;
+}
+
+.container-input {
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.container-input .form-element {
+    height: 30px;
+}
+
+.form-element input {
+    background-color: var(--input-field);
+    width: 350px;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+}
+
+.form-element button {
+    background-color: var(--primary-color);
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.container-input ul {
+    margin: 25px 10px;
+}
+
+.container-input ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.list-button {
+    padding: 5px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.edit, .save {
+    background-color: lawngreen;
+    font-family: 'Rubik', sans-serif;
+}
+
+.delete {
+    background-color: crimson;
+    font-family: 'Rubik', sans-serif;
+}
+
+.clear-button {
+    color: crimson;
+    letter-spacing: 1px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.display-none {
+    display: none;
+}
+
+.edit-input {
+    font-size: 20px;
+    height: 25px;
+    width: 250px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #aaa;
+}
+
+@media (max-width: 1000px) {
+    .form-element input {
+        width: 200px;
+    }
+    .edit-input {
+        width: 150px;
+    }
+}

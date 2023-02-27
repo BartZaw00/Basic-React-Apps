@@ -55,12 +55,15 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setText(textArray.slice(0,paragraphs))
+    let amount = parseInt(paragraphs);
+    if (count <= 0) amount = 1;
+    if (count > 8) amount = 8;
+    setText(textArray.slice(0, amount).join(" "));
   };
 
   const handleChange = (e) => {
-    setParagraphs(e.target.value)
-  }
+    setParagraphs(e.target.value);
+  };
 
   return (
     <div className="container">
@@ -68,7 +71,13 @@ function App() {
       <div className="content">
         <form onSubmit={handleSubmit}>
           <label htmlFor="amount">Paragraphs:</label>
-          <input type="number" name="amount" id="amount" value={paragraphs} onChange={handleChange}/>
+          <input
+            type="number"
+            name="amount"
+            id="amount"
+            value={paragraphs}
+            onChange={handleChange}
+          />
           <button type="submit">GENERATE</button>
         </form>
       </div>

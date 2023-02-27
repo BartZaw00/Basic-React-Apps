@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
@@ -43,6 +43,17 @@ function App() {
             return (
               <li key={item.id}>
                 <span>{item.title}</span>
+                <div>
+                  <button className="list-button edit">Edit</button>
+                  <button
+                    className="list-button delete"
+                    onClick={() => {
+                      setList(list.filter((element) => element.id !== item.id));
+                    }}
+                  >
+                    Delete
+                  </button>
+                </div>
               </li>
             );
           })}

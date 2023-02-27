@@ -49,6 +49,8 @@ function App() {
                     className="list-button delete"
                     onClick={() => {
                       setList(list.filter((element) => element.id !== item.id));
+                      console.log(list.length)
+                      if (list.length === 1) setClearBtn(false);
                     }}
                   >
                     Delete
@@ -63,7 +65,7 @@ function App() {
             className="clear-button"
             onClick={() => {
               setList([]);
-              setClearBtn(!clearBtn);
+              setClearBtn(false);
             }}
           >
             Clear Items

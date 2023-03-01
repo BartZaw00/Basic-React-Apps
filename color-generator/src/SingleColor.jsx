@@ -7,10 +7,16 @@ const SingleColor = ({ color, text, index, length }) => {
   console.log(index);
   console.log(length);
   if (index >= Math.floor(length / 2)) textColor = "white";
+  
+  const handleClick = () => {
+    navigator.clipboard.writeText(text);
+  }
+
   return (
     <div
       className="color"
       style={{ backgroundColor: `rgb(${rgb[0]},${rgb[1]},${rgb[2]})` }}
+      onClick={handleClick}
     >
       <div
         className="percent-value"
@@ -20,7 +26,7 @@ const SingleColor = ({ color, text, index, length }) => {
         className="color-value"
         style={{ color: textColor, fontWeight: "bold" }}
       >
-        {text}
+        {rgbToHex(...rgb)}
       </div>
     </div>
   );

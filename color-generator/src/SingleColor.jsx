@@ -2,15 +2,21 @@ import React, { useState, useEffect } from "react";
 import rgbToHex from "./utils";
 
 const SingleColor = ({ color, text, index, length }) => {
+  const [copied, setCopied] = useState(false);
+
   const { rgb, weight } = color;
   let textColor = "black";
   console.log(index);
   console.log(length);
   if (index >= Math.floor(length / 2)) textColor = "white";
-  
+
   const handleClick = () => {
-    navigator.clipboard.writeText(text);
-  }
+    navigator.clipboard.writeText(rgbToHex(...rgb));
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    },3000)
+  };
 
   return (
     <div
@@ -28,6 +34,9 @@ const SingleColor = ({ color, text, index, length }) => {
       >
         {rgbToHex(...rgb)}
       </div>
+      {
+        copied && "copied"
+      }
     </div>
   );
 };
